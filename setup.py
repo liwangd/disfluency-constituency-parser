@@ -6,18 +6,18 @@ try:
     USE_CYTHON = True
 except ImportError:
     sys.exit("""Could not import Cython, which is required to build benepar extension modules.
-Please install cython and numpy prior to installing benepar.""")
+Please install cython and numpy.""")
 
 try:
     import numpy as np
 except ImportError:
     sys.exit("""Could not import numpy, which is required to build the extension modules.
-Please install cython and numpy prior to installing benepar.""")
+Please install cython and numpy.""")
 
 with open("README.md", "r") as f:
     long_description = f.read()
 
-extensions = cythonize("benepar/*.pyx")
+extensions = cythonize("dc_parser/*.pyx")
 for ext_module in extensions:
     ext_module.include_dirs.append(np.get_include())
 
