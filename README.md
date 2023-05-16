@@ -70,7 +70,7 @@ $ mkdir model && cd model
 $ wget https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt
 $ wget https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz
 $ tar -xf bert-base-uncased.tar.gz && cd ..
-$ python3 src/main.py parse --input-path best_models/raw_sentences.txt --output-path best_models/parsed_sentences.txt --model-path-base best_models/swbd_fisher_bert_Edev.0.9078.pt >best_models/out.log
+$ python3 dc_parser/main.py parse --input-path best_models/raw_sentences.txt --output-path best_models/parsed_sentences.txt --model-path-base best_models/swbd_fisher_bert_Edev.0.9078.pt >best_models/out.log
 ```
 ### Using the Trained Models for Disfluency Tagging
 If you want to use the trained models to disfluency label your own data, check [here](https://github.com/pariajm/fisher-annotations).
@@ -79,7 +79,7 @@ If you want to use the trained models to disfluency label your own data, check [
 First, obtain silver parse trees for your unlabelled data by running the commands given in [here](#using-the-trained-models-for-parsing). Then, you can train a new model on the enlarged training set (gold + silver parse trees) using the following command:
   
 ```bash
-$ python3 src/train_parser.py --config results/swbd_fisher_bert_config.json --eval-path results/eval.txt >results/out_and_error.txt
+$ python3 dc_parser/train_parser.py --config results/swbd_fisher_bert_config.json --eval-path results/eval.txt >results/out_and_error.txt
 ```
 
 ### Reproducing Experiments

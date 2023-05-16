@@ -22,14 +22,13 @@ for ext_module in extensions:
     ext_module.include_dirs.append(np.get_include())
 
 setuptools.setup(
-    name="benepar",
-    version="0.0.3",
-    author="Nikita Kitaev",
-    author_email="kitaev@cs.berkeley.edu",
-    description="Berkeley Neural Parser",
+    name="dc_parser",
+    version="0.0.1",
+    author="Li Wang",
+    author_email="li@liwang.info",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/nikitakit/self-attentive-parser",
+    url="https://github.com/liwangd/disfluency-constituency-parser",
     packages=setuptools.find_packages(),
     package_data={'': ['*.pyx']},
     ext_modules = cythonize(extensions),
@@ -43,9 +42,4 @@ setuptools.setup(
     ),
     setup_requires = ["cython", "numpy"],
     install_requires = ["cython", "numpy", "nltk>=3.2"],
-    extras_require={
-        "cpu": ["tensorflow>=1.8.0"],
-        "gpu": ["tensorflow-gpu>=1.8.0"],
-        "spacy": ["spacy>=2.0.9"],
-    },
 )
