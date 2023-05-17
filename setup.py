@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="disfluency-constituency-parser",
-    version="0.0.3",
+    version="0.0.4",
     author="Li Wang",
     author_email="li@liwang.info",
     long_description=long_description,
