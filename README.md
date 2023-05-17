@@ -29,7 +29,7 @@ model.parse(["Today is a very good day!"])
 
 ### Citation
 If you use this model, please cite the following papers:
-``
+```
 @inproceedings{jamshid-lou-2019-neural,
     title = "Neural Constituency Parsing of Speech Transcripts",
     author = "Jamshid Lou, Paria and Wang, Yufei and Johnson, Mark",
