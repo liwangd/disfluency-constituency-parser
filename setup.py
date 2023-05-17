@@ -1,5 +1,8 @@
 import setuptools
 import sys
+import os
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 def get_requirements(path):
@@ -12,13 +15,9 @@ install_requires = get_requirements(os.path.join(base_dir, "requirements.txt"))
 with open("README.md", "r") as f:
     long_description = f.read()
 
-extensions = cythonize("dc_parser/*.pyx")
-for ext_module in extensions:
-    ext_module.include_dirs.append(np.get_include())
-
 setuptools.setup(
     name="disfluency-constituency-parser",
-    version="0.0.2",
+    version="0.0.3",
     author="Li Wang",
     author_email="li@liwang.info",
     long_description=long_description,
@@ -26,7 +25,6 @@ setuptools.setup(
     url="https://github.com/liwangd/disfluency-constituency-parser",
     packages=setuptools.find_packages(),
     package_data={'': ['*.pyx']},
-    ext_modules=cythonize(extensions),
     classifiers=(
         'Programming Language :: Python :: 2.7',
         "Programming Language :: Python :: 3",
