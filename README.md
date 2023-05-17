@@ -6,9 +6,7 @@ This repository updated the original repository to focus on inferencing using th
 
 ### Installation
 ```bash
-$ git clone https://github.com/liwangd/disfluency-constituency-parser.git
-$ cd disfluency-constituency-parser
-$ pip install .
+$ pip install disfluency-constituency-parser
 ```
 
 ### Usage
