@@ -4,3 +4,4 @@ disfluency_constituency_parser.egg-info/*
 dc_parser.egg-info/*
 *.c
 .idea/*
+.DS_Store
