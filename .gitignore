@@ -5,3 +5,4 @@ dc_parser.egg-info/*
 *.c
 .idea/*
 .DS_Store
+dist/*
