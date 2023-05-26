@@ -6,3 +6,4 @@ dc_parser.egg-info/*
 .idea/*
 .DS_Store
 dist/*
+__pycache__/*

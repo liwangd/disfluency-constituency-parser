@@ -35,8 +35,6 @@ jobs:
       with:
         python-versions: 'cp39-cp39 cp310-cp310 cp311-cp311'
         build-requirements: 'cython numpy'
-    - name: Build package
-      run: python -m build
     - name: Publish package
       env:
         TWINE_USERNAME: __token__
