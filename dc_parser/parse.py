@@ -1,8 +1,8 @@
 from typing import List
 import torch
 import logging
-from . import parse_nk
-from .utils import preprocess_sentence
+from dc_parser import parse_nk
+from dc_parser.utils import preprocess_sentence
 
 logger = logging.getLogger(__name__)
 

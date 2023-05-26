@@ -1,6 +1,3 @@
-import functools
-import os.path
-
 import numpy as np
 
 import torch
@@ -19,10 +16,10 @@ else:
 
 import pyximport
 pyximport.install(setup_args={"include_dirs": np.get_include()})
-from . import chart_helper
-from . import nkutil
+from dc_parser import chart_helper
+from dc_parser import nkutil
 
-from . import trees
+from dc_parser import trees
 
 
 START = "<START>"
